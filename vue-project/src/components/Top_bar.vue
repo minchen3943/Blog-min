@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="top_bar">
-      <router-link to="/" class="skip"><div>测试</div></router-link>
+      <router-link to="/" class="skip"><div>主页</div></router-link>
       <router-link to="/" class="skip"><div>测试</div></router-link>
       <router-link to="/" class="skip"><div>测试</div></router-link>
     </div>
@@ -17,8 +17,8 @@
   align-items: center;
   justify-content: space-around;
   width: 95vw;
-  height: 5vh;
-  background: rgba(54, 54, 54, 0.65);
+  height: 7vh;
+  background: rgba(94, 94, 94, 0.6);
   border-radius: 12px;
   margin-left: 2.5vw;
   margin-top: 5px;
@@ -26,5 +26,6 @@
 .skip {
   width: 25%;
   text-align: center;
+  font-size: 1.4em;
 }
 </style>

@@ -3,24 +3,39 @@
     <div class="line"></div>
     <div class="foot">
       <div class="left">
-        <span>
-          <font-awesome-icon :icon="['fab', 'x-twitter']" />
+        <span class="link">
+          <font-awesome-icon
+            :icon="['fab', 'x-twitter']"
+            style="color: #e6e6e6"
+          />
           <a href="">Twitter</a>
         </span>
-        <span>
-          <font-awesome-icon :icon="['fab', 'square-github']" />
-          <a href="">Twitter</a>
+        <span class="link">
+          <font-awesome-icon
+            :icon="['fab', 'square-github']"
+            style="color: #e6e6e6"
+          />
+          <a href="">Github</a>
         </span>
-        <span>
-          <font-awesome-icon :icon="['fab', 'qq']" />
-          <a href="">Twitter</a>
+        <span class="link">
+          <font-awesome-icon
+            :icon="['fab', 'telegram']"
+            style="color: #e6e6e6"
+          />
+          <a href="">telegram</a>
         </span>
-        <span>
-          <i class="fa-brands fa-square-x-twitter"></i>
-          <a href="">Twitter</a>
+        <span class="link">
+          <font-awesome-icon :icon="['fab', 'qq']" style="color: #e6e6e6" />
+          <a href="">QQ</a>
         </span>
       </div>
-      <div class="right"></div>
+      <div class="right">
+        <span class="link">
+          <a href="https://beian.mps.gov.cn/#/query/webSearch">
+            湘ICP备<br />2024087622号
+          </a>
+        </span>
+      </div>
     </div>
   </footer>
 </template>
@@ -30,9 +45,8 @@
 <style lang="scss" scoped>
 footer {
   width: 100vw;
-  height: 7.5vh;
+  height: 12vh;
   position: absolute;
-  background-color: aqua;
   bottom: 0;
   display: flex;
   align-items: center;
@@ -40,16 +54,16 @@ footer {
   flex-direction: column;
 }
 .line {
-  width: 70vw;
-  height: 2px;
-  background-color: rgb(109, 109, 109, 0.8);
+  width: 90vw;
+  height: 1.5px;
+  background-color: rgba(239, 239, 239, 0.921);
   flex-shrink: 0;
   margin-top: 2px;
+  border-radius: 20px;
 }
 .foot {
-  width: 80vw;
+  width: 90vw;
   height: 90%;
-  background-color: bisque;
   margin: 0;
   padding: 0;
   display: flex;
@@ -57,17 +71,23 @@ footer {
 }
 .left {
   width: 45%;
-  background-color: lightgreen;
-  margin: 0;
   padding: 10px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
+
 .right {
   width: 45%;
-  background-color: lightgreen;
   margin: 0;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.link {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  font-size: 1.05em;
 }
 </style>

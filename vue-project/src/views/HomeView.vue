@@ -1,11 +1,15 @@
 <template>
-  <top_bar />
-  <bottom_bar />
+  <img src="@/assets/logo1.png" alt="示例图片" class="absolute-img" />
 </template>
 
-<script setup>
-import top_bar from '@/components/Top_bar.vue'
-import bottom_bar from '@/components/Bottom_bar.vue'
-</script>
+<script></script>
 
-<style scoped></style>
+<style>
+.absolute-img {
+  position: absolute;
+  top: 45vh;
+  left: -20vw;
+  width: 350px;
+  height: auto;
+}
+</style>
