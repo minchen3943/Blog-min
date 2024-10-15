@@ -2,6 +2,7 @@
   <div class="background">
     <top_bar />
     <bottom_bar />
+    <div class="tip">Tip:建议使用手机端浏览</div>
     <RouterView />
   </div>
 </template>
@@ -21,5 +22,9 @@ import bottom_bar from '@/components/Bottom_bar.vue'
   background-position: -20px center;
   background-repeat: no-repeat;
   margin: 0;
+}
+.tip {
+  color: #c5c5c5;
+  font-size: 17px;
 }
 </style>
