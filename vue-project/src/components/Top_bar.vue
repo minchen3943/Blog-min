@@ -1,9 +1,11 @@
 <template>
-  <div class="top_bar">
-    <router-link to="/" class="skip"><div>测试</div></router-link>
-    <router-link to="/" class="skip"><div>测试</div></router-link>
-    <router-link to="/" class="skip"><div>测试</div></router-link>
-  </div>
+  <header>
+    <div class="top_bar">
+      <router-link to="/" class="skip"><div>测试</div></router-link>
+      <router-link to="/" class="skip"><div>测试</div></router-link>
+      <router-link to="/" class="skip"><div>测试</div></router-link>
+    </div>
+  </header>
 </template>
 
 <script setup></script>
