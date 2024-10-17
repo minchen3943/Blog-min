@@ -44,6 +44,7 @@ def comments_get(request):
     # 将数据转换为可返回的 JSON 格式
     comment_list = [
         {
+            "id": comment.id,
             "author": comment.author,
             "content": comment.content,
             "created": time_switching(comment.created),
