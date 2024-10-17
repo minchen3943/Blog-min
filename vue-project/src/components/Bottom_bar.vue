@@ -46,7 +46,6 @@
 footer {
   width: 100vw;
   height: 12vh;
-  position: absolute;
   bottom: 0;
   display: flex;
   align-items: center;

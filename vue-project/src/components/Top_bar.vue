@@ -21,7 +21,7 @@
   background: rgba(94, 94, 94, 0.6);
   border-radius: 12px;
   margin-left: 2.5vw;
-  margin-top: 5px;
+  margin-right: 2.5vw;
 }
 .skip {
   width: 25%;
