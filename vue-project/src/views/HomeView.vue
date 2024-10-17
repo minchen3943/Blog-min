@@ -1,9 +1,9 @@
+<template>
+  <Top_bar />
+</template>
+
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import Top_bar from '@/components/Top_bar.vue'
 </script>
 
-<template>
-  <main>
-    <TheWelcome />
-  </main>
-</template>
+<style scoped></style>
