@@ -1,6 +1,7 @@
 from django.http import JsonResponse
 from .models import Comment
 from django.core.exceptions import ValidationError
+from django.views.decorators.http import require_http_methods
 from datetime import datetime
 import pytz
 
@@ -94,3 +95,25 @@ def comment_add(request):
             return JsonResponse({"error": e.message_dict}, status=403)
 
     return JsonResponse({"error": "请求方法错误"}, status=405)
+
+
+@require_http_methods(["DELETE"])
+def comment_delete(request):
+    # noinspection PyUnresolvedReferences
+    """
+        Args:
+            request: DELETE
+            comment_id: 评论id
+        Returns:
+            message: 评论已成功删除
+            status：204
+        Raises:
+            404：评论不存在
+        """
+    try:
+        comment_id = request.GET.get('id')
+        comment = Comment.objects.get(id=comment_id)
+        comment.delete()
+        return JsonResponse({"message": "评论已成功删除"}, status=204)
+    except Comment.DoesNotExist:
+        return JsonResponse({"error": "评论不存在"}, status=404)

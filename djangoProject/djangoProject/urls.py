@@ -23,4 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('comment/get', views.comments_get),
     path('comment/add', views.comment_add),
+    path('comment/delete', views.comment_delete),
 ]
