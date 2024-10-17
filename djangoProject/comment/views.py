@@ -20,11 +20,7 @@ def comment_add(request):
         try:
             comment.full_clean()  # 验证模型字段
             comment.save()
-            return JsonResponse({"message": "评论添加成功", "comment": {
-                "author": comment.author,
-                "content": comment.content,
-                "created": comment.created
-            }})
+            return JsonResponse({"message": "评论添加成功"}, status=200)
         except ValidationError as e:
             return JsonResponse({"error": e.message_dict}, status=400)
 
