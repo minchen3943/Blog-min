@@ -18,7 +18,7 @@ import bottom_bar from '@/components/Bottom_bar.vue'
   min-height: 100vh;
   background-image: url('@/assets/background.jpg');
   background-size: cover;
-  background-position: -45px center;
+  background-position: -20px center;
   background-repeat: no-repeat;
   margin: 0;
   display: flex;
