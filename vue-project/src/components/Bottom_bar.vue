@@ -87,7 +87,7 @@ footer {
 .link {
   padding-top: 1px;
   padding-bottom: 1px;
-  font-size: 1.05em;
+  font-size: 1em;
   padding-left: 5px;
   padding-right: 5px;
 }

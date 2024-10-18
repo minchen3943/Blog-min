@@ -1,6 +1,6 @@
 <template>
   <div class="comment">
-    <div class="card" v-for="(item, index) in comments" :key="index">
+    <div class="card" v-for="(item, index) in comment_list" :key="index">
       <div class="card-header">
         <h5 class="author">{{ item.author }}</h5>
       </div>
@@ -12,39 +12,52 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      comments: [
-        {
-          id: 1,
-          author: 'admin',
-          content: 'test',
-          created: '42432',
-        },
-        {
-          id: 1,
-          author: 'admin',
-          content: 'test',
-          created: '42432',
-        },
-        {
-          id: 1,
-          author: 'admin',
-          content: 'test',
-          created: '42432',
-        },
-        {
-          id: 1,
-          author: 'admin',
-          content: 'test',
-          created: '42432',
-        },
-      ],
-    }
-  },
+<script setup>
+import { onMounted, ref } from 'vue'
+import axios from 'axios'
+const comment_list = ref([])
+const page = ref(1)
+const pagenew = ref(2)
+
+function getData() {
+  axios
+    .get('/api/comment/get', {
+      params: {
+        page: page.value,
+      },
+    })
+    .then(function (response) {
+      console.log(response)
+      if (response.status === 200) {
+        const data = response.data.comments
+        comment_list.value = data
+      }
+    })
+    .catch(function (error) {
+      console.log(error)
+    })
 }
+function addData() {
+  axios
+    .get('/api/comment/get', {
+      params: {
+        page: pagenew,
+      },
+    })
+    .then(function (response) {
+      console.log(response)
+      if (response.status === 200) {
+        const data = response.data.comments
+        comment_list.value.push = data
+      }
+    })
+    .catch(function (error) {
+      console.log(error)
+    })
+}
+onMounted(() => {
+  getData()
+})
 </script>
 
 <style scoped>
@@ -55,7 +68,6 @@ export default {
   margin-right: 10vw;
 }
 .card {
-  /* text-align: center; */
   background-color: rgba(190, 190, 190, 0.521);
   margin-bottom: 3vh;
 }
