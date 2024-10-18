@@ -80,7 +80,7 @@ def comment_add(request):
 
         # 检查数据是否有效
         if not author or not content:
-            return JsonResponse({"error": "作者和内容不能为空"}, status=401)
+            return JsonResponse({"error": f"作者和内容不能为空"}, status=401)
 
         if len(content) > 150:
             return JsonResponse({"error": "内容不能超过150个字符"}, status=402)
